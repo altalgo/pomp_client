@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'carmen-bold';
+  src: url('./Carmen-Sans-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'carmen-exbold';
+  src: url('./Carmen-Sans-ExtraBold.woff') format('woff');
+}
