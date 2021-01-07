@@ -15,16 +15,12 @@ export default class LoginPage extends Component {
             <div
               className='btn--kakao'
               style={{
-                backgroundImage: `url(${
-                  process.env.PUBLIC_URL + '/img/kakaoLogin.png'
-                })`,
+                backgroundImage: 'url(/img/loginKakao.png)',
               }}></div>
             <div
               className='btn--google'
               style={{
-                backgroundImage: `url(${
-                  process.env.PUBLIC_URL + '/img/googleLogin.png'
-                })`,
+                backgroundImage: 'url(/img/loginGoogle.png)',
               }}></div>
           </div>
           <div className='loginform--wrapper'>
