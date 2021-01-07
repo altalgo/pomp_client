@@ -5,6 +5,3 @@ export default class RegisterPage extends Component {
     return <div>Register Page</div>;
   }
 }
-// 행복해~
-// 잘되네
-// 안녕하세여

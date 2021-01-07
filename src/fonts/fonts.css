@@ -6,3 +6,7 @@
   font-family: 'carmen-exbold';
   src: url('./Carmen-Sans-ExtraBold.woff') format('woff');
 }
+@font-face {
+  font-family: 'carmen-medium';
+  src: url('./Carmen-Sans-Medium.woff') format('woff');
+}
