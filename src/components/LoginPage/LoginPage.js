@@ -11,33 +11,66 @@ export default class LoginPage extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const data = {email: this.state.email, password: this.state.password}
+    const data = { email: this.state.email, password: this.state.password };
     console.log(data);
-    axios.post('/api/auth/login', data)
-      .then(response => {
+    axios
+      .post('/api/auth/login', data)
+      .then((response) => {
         if (response.data.loginSuccess) {
-          window.location.href="/forms";
+          // axios.get('/api/auth/user').then((response) => {
+          //   console.log(response);
+          // });
+          window.location.href = '/forms';
         } else {
           alert(response.data.error);
           window.location.reload();
-        };
+        }
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
+  };
+
+  handleGoogleOauth = (e) => {
+    const data = axios
+      .get('/api/auth/google/login')
+      .then((response) => {
+        if (response.data.loginSuccess) {
+          window.location.href = '/forms';
+        } else {
+          alert(response.data.error);
+          window.location.reload();
+        }
+      })
+      .catch((err) => console.log(err));
+    console.log(data);
+  };
+
+  handleKakaoOauth = (e) => {
+    const data = axios
+      .get('/api/auth/kakao/login')
+      .then((response) => {
+        if (response.data.loginSuccess) {
+          window.location.href = '/forms';
+        } else {
+          alert(response.data.error);
+          window.location.reload();
+        }
+      })
+      .catch((err) => console.log(err));
   };
 
   handleEmailChange = (e) => {
     this.setState({
-      email : e.target.value
-    })
+      email: e.target.value,
+    });
   };
   handlePasswordChange = (e) => {
     this.setState({
-      password : e.target.value
-    })
+      password: e.target.value,
+    });
   };
-  
+
   render() {
-    const {email, password} = this.state;
+    const { email, password } = this.state;
     return (
       <div className='container'>
         <div className='login--wrapper'>
@@ -63,7 +96,10 @@ export default class LoginPage extends Component {
             <hr className='second--hr' />
           </div>
           <div className='loginform--wrapper'>
-            <form className='login--form' method="post" onSubmit={this.handleSubmit}>
+            <form
+              className='login--form'
+              method='post'
+              onSubmit={this.handleSubmit}>
               <div className='loginform--input--wrapper'>
                 <label htmlFor='email' style={{ marginLeft: '0.6rem' }}>
                   Email
