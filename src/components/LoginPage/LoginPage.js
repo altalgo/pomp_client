@@ -16,7 +16,7 @@ export default class LoginPage extends Component {
     axios.post('/api/auth/login', data)
       .then(response => {
         if (response.data.loginSuccess) {
-          window.location.href="/forms";
+          window.location.href = "/forms";
         } else {
           alert(response.data.error);
           window.location.reload();
