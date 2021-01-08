@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path='/' component={LoginPage}></Route>
-        <Route exact path='/login' component={LoginPage}></Route>
+        <Route exact path='/forms' component={MainPage}></Route>
         <Route exact path='/register' component={RegisterPage}></Route>
       </Switch>
     </Router>

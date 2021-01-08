@@ -54,16 +54,11 @@ hr {
   display: inline-block;
   border: 0.6px solid #cfcfcf;
 }
-.first--hr {
-}
 
 .or--text {
   display: inline-block;
   margin: 0 8px;
   color: #4a4a4a;
-}
-
-.second--hr {
 }
 
 input {
