@@ -9,6 +9,12 @@ export default class LoginPage extends Component {
     password: '',
   };
 
+  onHandleChange = (e) => {
+    let nextState = {};
+    nextState[e.target.name] = e.target.value;
+    this.setState(nextState);
+  };
+
   handleSubmit = (e) => {
     e.preventDefault();
     const data = { email: this.state.email, password: this.state.password };
@@ -58,25 +64,16 @@ export default class LoginPage extends Component {
       .catch((err) => console.log(err));
   };
 
-  handleEmailChange = (e) => {
-    this.setState({
-      email: e.target.value,
-    });
-  };
-  handlePasswordChange = (e) => {
-    this.setState({
-      password: e.target.value,
-    });
-  };
-
   render() {
     const { email, password } = this.state;
     return (
       <div className='container'>
         <div className='login--wrapper'>
           <div className='logo'>
-            <span style={{ color: '#3E3E3E' }}>Pom</span>
-            <span style={{ color: '#92A8D1' }}>p</span>
+            <a href='/'>
+              <span style={{ color: '#3E3E3E' }}>Pom</span>
+              <span style={{ color: '#92A8D1' }}>p</span>
+            </a>
           </div>
           <div className='btn--wrapper'>
             <a href='/api/auth/google'>
@@ -109,7 +106,8 @@ export default class LoginPage extends Component {
                   name='email'
                   placeholder='example@email.com'
                   value={email}
-                  onChange={this.handleEmailChange}
+                  onChange={this.onHandleChange}
+                  className='login--input'
                 />
                 <label htmlFor='password' style={{ marginLeft: '0.6rem' }}>
                   Password
@@ -119,7 +117,8 @@ export default class LoginPage extends Component {
                   name='password'
                   placeholder='**********'
                   value={password}
-                  onChange={this.handlePasswordChange}
+                  onChange={this.onHandleChange}
+                  className='login--input'
                 />
               </div>
               <button className='login--btn' type='submit'>

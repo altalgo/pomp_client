@@ -12,6 +12,12 @@
   font-size: 72px;
 }
 
+.login--wrapper {
+  margin: 0 auto;
+  width: 537px;
+  text-align: center;
+}
+
 .loginform--wrapper .login--form {
   display: flex;
   flex-direction: column;
@@ -19,7 +25,7 @@
   height: 14.5rem;
   margin: 0 auto;
   border-radius: 1.4rem;
-  padding: 1.5rem 2rem 1.2rem 2rem;
+  padding: 1.6rem 2rem 1.2rem 2rem;
   background-color: #eee;
 }
 
@@ -67,15 +73,8 @@ input {
   border: none;
   width: 17rem;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.04) inset;
-  margin: 0.3rem 0 0.7rem;
   font-family: 'carmen-medium';
   font-size: 0.9em;
-}
-
-.login--wrapper {
-  margin: 0 auto;
-  width: 537px;
-  text-align: center;
 }
 
 .btn--wrapper {
@@ -109,11 +108,24 @@ input {
 .register--btn {
   font-size: 0.9em;
   margin-top: 0.8rem;
-  height: 8rem;
+  /* height: 8rem; */
 }
 
 .register--link {
   color: #92a8d1;
   display: inline-block;
   border-bottom: 1.5px solid #92a8d1;
+}
+
+.message--area {
+  width: 100%;
+  height: 1rem;
+  font-size: 0.72rem;
+  color: red;
+  margin: 0.3rem 5px 0.3rem;
+  font-family: 'carmen-medium';
+}
+
+.login--input {
+  margin: 0.3rem 0 1.2rem;
 }
