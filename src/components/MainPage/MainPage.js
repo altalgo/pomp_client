@@ -10,7 +10,7 @@ class mainPage extends Component {
   };
 
   async componentDidMount() {
-    let res = await axios.get('/api/auth/user').then((res) => {
+    await axios.get('/api/auth/user').then((res) => {
       if (res.data.isAuth) {
         this.setState({
           username: res.data.username,
