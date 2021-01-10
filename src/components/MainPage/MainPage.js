@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 import Header from '../Header';
 import axios from 'axios';
-
+import FormList from './FormList';
 class mainPage extends Component {
   state = {
     username: '',
@@ -37,8 +37,7 @@ class mainPage extends Component {
           username={this.state.username}
           logoutBtn={this.state.isAuth ? 'true' : 'false'}
         />
-        <div>
-        </div>
+        <FormList />
       </Fragment>
     );
   }
