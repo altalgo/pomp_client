@@ -7,7 +7,7 @@ class Header extends Component {
   render() {
     return (
       <div className='header'>
-        <Link to='/forms' className='logo'>
+        <Link to='/forms' className='header--logo'>
           <span style={{ color: '#333333' }}>Pom</span>
           <span style={{ color: '#92a8d1' }}>p</span>
         </Link>
