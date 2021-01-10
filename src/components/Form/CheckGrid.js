@@ -11,7 +11,7 @@ export default class CheckGrid extends Component {
           <img src={this.props.imgUrl} />
         </div>
         <div className='checkgrid--list'>
-          <table>
+          <table className='checkgrid--table'>
             <thead>
               <tr>
                 <th></th>

@@ -83,3 +83,16 @@ input[type='radio']:checked {
   align-items: center;
   margin: 0.4rem 0;
 }
+
+.checkgrid--list, .checkgrid--table, .objectivegrid--list, .objectivegrid--table {
+  width: 30rem;
+  text-align: center;
+}
+
+.checkgrid--list, .objectivegrid--list {
+  margin: 0 auto;
+}
+
+.checkgrid--table td, .objectivegrid--table td {
+  padding: 0.3rem 0;
+}

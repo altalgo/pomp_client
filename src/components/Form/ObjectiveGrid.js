@@ -11,7 +11,7 @@ export default class ObjectiveGrid extends Component {
           <img src={this.props.imgUrl} />
         </div>
         <div className='objectivegrid--list'>
-          <table>
+          <table className='objectivegrid--table'>
             <thead>
               <tr>
                 <th></th>
@@ -27,7 +27,7 @@ export default class ObjectiveGrid extends Component {
                     <td>{hangEle}</td>
                     {this.props.list.ryul.map((ryulEle, rIdx) => {
                       if (this.props.ans[hIdx][rIdx] === 1)
-                        return <td className="checked"> <input type='radio' checked disabled /></td>;
+                        return <td className="checked"><input type='radio' checked disabled /></td>;
                       else
                         return <td><input type='radio' disabled /></td>
                     })}
