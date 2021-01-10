@@ -8,7 +8,7 @@ class FormList extends Component {
   };
 
   async componentDidMount() {
-    let forms = await axios
+    await axios
       .get('/api/forms/view')
       .then((res) => {
         this.setState({
@@ -19,21 +19,24 @@ class FormList extends Component {
       .catch((err) => console.log(err));
 
     const arr = [];
-    this.state.forms.map((info) => {
+    this.state.forms.forEach((info) => {
       if (!arr.includes(info.date)) {
         arr.push(info.date);
       }
     });
-    arr.map((dates) => {
+    arr.forEach((dates) => {
       this.state.dataSortedByDate[dates] = [];
+      const nextState = JSON.parse(JSON.stringify(this.state.dataSortedByDate));
+      this.setState({ dataSortedByDate: nextState });
     });
 
-    this.state.forms.map((info) => {
+    this.state.forms.forEach((info) => {
       this.state.dataSortedByDate[info.date] = [
         ...this.state.dataSortedByDate[info.date],
         info,
       ];
-      // console.log(this.state.dataSortedByDate[info.date]);
+      const nextState = JSON.parse(JSON.stringify(this.state.dataSortedByDate));
+      this.setState({ dataSortedByDate: nextState });
     });
   }
 
