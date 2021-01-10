@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Short.css';
 
-export default class ObjectiveGrid extends Component {
+export default class CheckGrid extends Component {
   render() {
     return (
       <div className='container'>
@@ -10,7 +10,7 @@ export default class ObjectiveGrid extends Component {
         <div className='img--wrapper'>
           <img src={this.props.imgUrl} />
         </div>
-        <div className='objectivegrid--list'>
+        <div className='checkgrid--list'>
           <table>
             <thead>
               <tr>
@@ -26,7 +26,7 @@ export default class ObjectiveGrid extends Component {
                   <tr>
                     <td>{hangEle}</td>
                     {this.props.list.ryul.map((ryulEle, rIdx) => {
-                      if (this.props.ans[hIdx][rIdx] === 1)
+                      if (this.props.ans[hIdx][rIdx]==1)
                         return <td className="checked"> <input type='radio' checked disabled /></td>;
                       else
                         return <td><input type='radio' disabled /></td>

@@ -12,11 +12,19 @@ export default class Radio extends Component {
           <img src={this.props.imgUrl} />
         </div>
         <div className='radio--list'>
-        {this.props.list.map((ele) => { 
-            return (ele === this.props.ans ? <div className="checked">{ele}</div> : <div>{ele}</div>)
-            }
-          )
-        }
+          {this.props.list.map((ele) => {
+            return ele === this.props.ans ? (
+              <div className='checked'>
+                <input type='radio' checked disabled />
+                {ele}
+              </div>
+            ) : (
+              <div>
+                <input type='radio' disabled />
+                {ele}
+              </div>
+            );
+          })}
         </div>
       </div>
     );
