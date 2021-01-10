@@ -31,12 +31,9 @@ img {
 }
 
 .long--answer {
-  background-color: #fff;
-  border: 0.1rem solid #dadce0;
-  border-radius: 1rem;
   height: auto;
+  line-height: 1.6;
   width: 100%;
-  resize: none;
 }
 
 .short--answer {
@@ -48,7 +45,7 @@ img {
   width: 100%;
   height: auto;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
