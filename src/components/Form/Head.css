@@ -1,0 +1,29 @@
+.desc--closed {
+    height: 3rem;
+    width: 38rem;
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+.desc--opened {
+    height: auto;
+    width: 38rem;
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+.more--btn {
+    border: none;
+    background-color: transparent;
+    font-family: "carmen-medium";
+    font-size: 1.1em;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}

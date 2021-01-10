@@ -6,7 +6,7 @@
   background-color: #fff;
   border: 0.1rem solid #dadce0;
   border-radius: 0.8rem;
-  width: 40vw;
+  width: 50rem;
   height: auto;
   margin-bottom: 1rem;
   padding: 2rem;
@@ -17,13 +17,15 @@ img {
 }
 
 .title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
   font-weight: 700;
 }
 
 .desc {
-  margin-bottom: 1rem;
+  margin: 0.5rem 0;
+  color: #333333;
+  font-size: 0.9rem;
 }
 
 .img {
@@ -54,6 +56,11 @@ img {
 
 .checked {
   color: purple;
+}
+
+.checked:after {
+  content: " ✔️";
+  font-size: 0.8em;
 }
 
 .option {
