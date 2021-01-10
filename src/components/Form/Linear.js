@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import './Short.css';
 
-export default class Check extends Component {
+export default class Radio extends Component {
   render() {
     return (
       <div className='container'>
@@ -9,17 +10,15 @@ export default class Check extends Component {
         <div className='img--wrapper'>
           <img src={this.props.imgUrl} />
         </div>
-        <div className='check--list'>
+        <div className='linear--list'>
           {this.props.list.map((ele) => {
-            return this.props.ans.includes(ele) ? (
-              <div className='checked'>
-                <input type='radio' checked disabled />
-                {ele}
+            return ele === this.props.ans ? (
+              <div className='option checked'>
+                {ele} <input type='radio' checked disabled />
               </div>
             ) : (
-              <div>
-                <input type='radio' disabled />
-                {ele}
+              <div className='option'>
+                {ele} <input type='radio' disabled />
               </div>
             );
           })}
