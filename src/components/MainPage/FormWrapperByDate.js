@@ -11,7 +11,7 @@ class FormWrapperByDate extends Component {
         }
         return (
             <div>
-                <h5 style={dateStyle}>{this.props.date}</h5>
+                <h5 style={dateStyle}>{this.props.date} ↓</h5>
                 {this.props.data.map((data) => {
                     return <FormListItem info={data}/>
                 })}

@@ -29,5 +29,6 @@
 
 .header--userinfo .header--username:after {
   content: '|';
+  color: #999999;
   margin-left: 0.5rem;
 }
