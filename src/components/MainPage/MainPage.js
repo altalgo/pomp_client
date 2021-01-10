@@ -29,7 +29,7 @@ class mainPage extends Component {
           username={this.state.username}
           logoutBtn={this.state.isAuth ? 'true' : 'false'}
         />
-        <FormList />
+        <FormList/>
       </Fragment>
     );
   }
