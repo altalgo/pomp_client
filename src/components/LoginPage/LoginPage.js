@@ -67,7 +67,7 @@ export default class LoginPage extends Component {
   render() {
     const { email, password } = this.state;
     return (
-      <div className='container'>
+      <div className='login--container'>
         <div className='login--wrapper'>
           <div className='logo'>
             <a href='/'>

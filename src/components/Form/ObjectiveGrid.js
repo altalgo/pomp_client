@@ -12,16 +12,27 @@ export default class ObjectiveGrid extends Component {
         </div>
         <div className='dropdown--list'>
           <table>
-            <thead></thead>
-            <tbody></tbody>
+            <thead>
+              <tr>
+                <th></th>
+                {this.props.list.ryul.map((ele, RIdx) => {
+                  return <th className=''>{ele}</th>;
+                })}
+              </tr>
+            </thead>
+            <tbody>
+              {this.props.list.hang.map((hangEle, hIdx) => {
+                return (
+                  <tr>
+                    <td>{hangEle}</td>
+                    {this.props.list.ryul.map((ryulEle, rIdx) => {
+                      return <td className={hangEle + ' ' + ryulEle}></td>;
+                    })}
+                  </tr>
+                );
+              })}
+            </tbody>
           </table>
-          {this.props.list.map((ele) => {
-            return ele === this.props.ans ? (
-              <div className='checked'>{ele}</div>
-            ) : (
-              <div>{ele}</div>
-            );
-          })}
         </div>
       </div>
     );
