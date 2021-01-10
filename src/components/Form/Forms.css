@@ -1,0 +1,9 @@
+.forms--wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  overflow: scroll;
+  background-color: #f0ebf8;
+}

@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: #fff;
+  border: 0.1rem solid #dadce0;
+  border-radius: 1rem;
+  width: 40vw;
+  height: auto;
+  margin-bottom: 1rem;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.short--answer {
+  border-bottom: 1px black solid;
+}
+
+.checked {
+  color: purple;
+}

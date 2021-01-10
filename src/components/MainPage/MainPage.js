@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 import Header from '../Header';
 import axios from 'axios';
+
 class mainPage extends Component {
   state = {
     username: '',
@@ -19,6 +20,14 @@ class mainPage extends Component {
         this.props.history.push('/login'); // Redirect
       }
     });
+    let forms = await axios
+      .get('/api/forms/view')
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log(err));
+    let form = await axios
+      .get('/api/forms/view/3')
+      // .then((res) => console.log(res.data))
+      .catch((err) => console.log(err));
   }
 
   render() {
@@ -28,7 +37,8 @@ class mainPage extends Component {
           username={this.state.username}
           logoutBtn={this.state.isAuth ? 'true' : 'false'}
         />
-        <div></div>
+        <div>
+        </div>
       </Fragment>
     );
   }

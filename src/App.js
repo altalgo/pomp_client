@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import MainPage from './components/MainPage/MainPage';
 import LoginPage from './components/LoginPage/LoginPage';
 import RegisterPage from './components/RegisterPage/RegisterPage';
+import Forms from './components/Form/Forms'
 import Auth from './hoc/auth';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={Auth(LoginPage, false)}></Route>
         <Route exact path='/forms' component={Auth(MainPage, true)}></Route>
+        <Route exact path='/forms/:id' component={Auth(Forms, true)}></Route>
         <Route
           exact
           path='/register'
