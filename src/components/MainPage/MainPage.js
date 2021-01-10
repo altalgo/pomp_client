@@ -20,15 +20,6 @@ class mainPage extends Component {
         this.props.history.push('/login'); // Redirect
       }
     });
-    let forms = await axios
-      .get('/api/forms/view')
-      .then((res) => console.log(res.data))
-      .catch((err) => console.log(err));
-
-    let form = await axios
-      .get('/api/forms/view/3')
-      // .then((res) => console.log(res.data))
-      .catch((err) => console.log(err));
   }
 
   render() {

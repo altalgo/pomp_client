@@ -3,10 +3,20 @@ import FormWrapperByDate from './FormWrapperByDate';
 import axios from 'axios';
 class FormList extends Component {
     state = {
-        forms: []
+        forms: [],
+        dataSortedByDate: {}
     };
 
-    componentDidMount() {
+    async componentDidMount() {
+        let forms = await axios
+            .get('/api/forms/view')
+            .then((res) => { this.setState({
+                forms: res.data.headers
+            });
+            console.log(this.state.forms);
+        })
+            .catch((err) => console.log(err));
+        
         const arr = [];
         this.state.forms.map((info) => {
             if (!arr.includes(info.date)) {
@@ -14,26 +24,14 @@ class FormList extends Component {
             }
         })
         arr.map((dates) => {
-            this.dataSortedByDate[dates] = [];
+            this.state.dataSortedByDate[dates] = [];
         });
         
         this.state.forms.map((info) => {
-            this.dataSortedByDate[info.date] = [...this.dataSortedByDate[info.date], info];
-            // console.log(this.dataSortedByDate[info.date]);
+            this.state.dataSortedByDate[info.date] = [...this.state.dataSortedByDate[info.date], info];
+            // console.log(this.state.dataSortedByDate[info.date]);
         })
     }
-
-    dataSortedByDate = {};     
-
-    async componentDidMount() {
-        let forms = await axios
-            .get('/api/forms/view')
-            .then((res) => this.setState({
-                forms: res.data
-            }))
-            .catch((err) => console.log(err));
-    }
-
 
     render() {
         const mainWrapperStyle = {
@@ -43,8 +41,8 @@ class FormList extends Component {
 
         return (
             <div className="main--contents--wrapper" style={mainWrapperStyle}>
-                {Object.keys(this.dataSortedByDate).map((data) => {
-                    return <FormWrapperByDate date={data} data={this.dataSortedByDate[data]}/>
+                {Object.keys(this.state.dataSortedByDate).map((data) => {
+                    return <FormWrapperByDate date={data} data={this.state.dataSortedByDate[data]}/>
                 })}
             </div>
         );
