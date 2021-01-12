@@ -24,11 +24,11 @@ export default class ExtLoginPage extends Component {
       .then((response) => {
         if (response.data.loginSuccess) {
           // 로그인 완료 후
-          chrome.runtime.sendMessage("ipffhgmabaaegdgiahgkmlifdgnlehla",
-            { msg: "loginedLocal", uuid: response.data.userUUID },
-            function (res) {
-              console.log(res);
-            });
+           chrome.runtime.sendMessage("ipffhgmabaaegdgiahgkmlifdgnlehla",
+             { msg: "loginedLocal", uuid: response.data.userUUID },
+             function (res) {
+               console.log(res);
+           });
           window.close();
         } else {
           alert(response.data.error);
