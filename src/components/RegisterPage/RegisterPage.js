@@ -150,7 +150,7 @@ class RegisterPage extends Component {
   
   render() {
     return (
-      <div className='container'>
+      <div className='register--container'>
         <div className='register--wrapper'>
           <div className='logo'>
             <a href="/">
