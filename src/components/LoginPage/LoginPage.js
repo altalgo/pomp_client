@@ -98,7 +98,7 @@ export default class LoginPage extends Component {
               method='post'
               onSubmit={this.handleSubmit}>
               <div className='loginform--input--wrapper'>
-                <label htmlFor='email' style={{ marginLeft: '0.6rem' }}>
+                <label htmlFor='email'>
                   Email
                 </label>
                 <input
@@ -109,7 +109,7 @@ export default class LoginPage extends Component {
                   onChange={this.onHandleChange}
                   className='login--input'
                 />
-                <label htmlFor='password' style={{ marginLeft: '0.6rem' }}>
+                <label htmlFor='password'>
                   Password
                 </label>
                 <input
