@@ -27,6 +27,7 @@ export default class ExtLoginPage extends Component {
         if (response.data.loginSuccess) {
           // https://stackoverflow.com/questions/41353594/reactjs-chrome-extension-message-passing-not-working/41354213
 
+          // https://stackoverflow.com/questions/34424845/adding-script-tag-to-react-jsx
           const script = document.createElement("script");
           script.innerHTML = `
           chrome.runtime.sendMessage("olhikehcbmkheggemandfhjekkbffiki",
@@ -34,7 +35,7 @@ export default class ExtLoginPage extends Component {
           `;
           document.body.appendChild(script);
 
-          // window.location.href = "/extloginsuccess";
+          window.location.href = "/extloginsuccess";
         } else {
           alert(response.data.error);
           // window.location.reload();

@@ -10,9 +10,9 @@ class FormWrapperByDate extends Component {
             color: "#555"
         }
         return (
-            <div>
+            <div className="form--wrapper--by--date">
                 <h5 style={dateStyle}>{this.props.date} ↓</h5>
-                {this.props.data.map((info) => {
+                {this.props.data.map((info, key) => {
                     console.log(info);
                     return <FormListItem info={info} />
                 })}

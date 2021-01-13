@@ -15,7 +15,7 @@
 
 .register--wrapper {
   margin: 0 auto;
-  width: 537px;
+  width: 100vw;
   text-align: center;
 }
 
@@ -25,7 +25,7 @@
   width: 21rem;
   height: 24.2rem;
   margin: 0 auto;
-  border-radius: 1.4rem;
+  border-radius: 23px;
   padding: 1.5rem 2rem 1.2rem 2rem;
   background-color: #eee;
 }
@@ -54,7 +54,7 @@ input {
   height: 1rem;
   font-size: 0.72rem;
   color: red;
-  margin: 0.3rem 5px 0.3rem;
+  margin: 0.3rem 0.3rem 0.3rem;
   font-family: 'carmen-medium';
 }
 
@@ -64,4 +64,42 @@ input {
 
 .good {
     color: green;
+}
+
+@media screen and (max-width: 375px) {
+  .logo {
+    font-family: 'carmen-exbold';
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .register--form--wrapper .register--form {
+    display: flex;
+    flex-direction: column;
+    width: 16rem;
+    height: 24.2rem;
+    margin: 0 auto;
+    border-radius: 23px;
+    padding: 1.5rem 2rem 1.2rem 2rem;
+    background-color: #eee;
+  }
+  
+  .register--form--input--wrapper {
+    display: inline-block;
+    width: 12rem;
+    text-align: left;
+    font-size: 0.8em;
+  }
+  
+  input {
+    margin-top: 0.27rem;
+    padding: 0.5rem;
+    border-radius: 15px;
+    border: none;
+    width: 17rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.04) inset;
+    font-family: 'carmen-medium';
+    font-size: 0.9em;
+  }
+
 }

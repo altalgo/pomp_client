@@ -1,0 +1,28 @@
+.main--contents--wrapper {
+    margin: 0 auto;
+    width: 102vh;
+}
+
+.form--wrapper--by--date {}
+
+.form--list--item {
+    width: 50rem;
+    height: 4.5rem;
+    background-color: rgb(223, 228, 242);
+    margin: 1.4rem auto;
+    border-radius: 2.4rem;
+    padding: 1.7rem 1.8rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media(max-width:1008px) {
+    .main--contents--wrapper {
+        margin: 0 auto;
+        width: 82vw;
+    }
+    .form--list--item {
+        width: 83vw;
+        margin: 1rem auto 1.4rem auto;
+    }
+}

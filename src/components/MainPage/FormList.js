@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FormWrapperByDate from './FormWrapperByDate';
 import axios from 'axios';
+import './FormList.css';
 class FormList extends Component {
   state = {
     forms: [],
@@ -41,14 +42,9 @@ class FormList extends Component {
   }
 
   render() {
-    const mainWrapperStyle = {
-      margin: '0 auto',
-      width: '80vh',
-    };
-
     return (
-      <div className='main--contents--wrapper' style={mainWrapperStyle}>
-        {Object.keys(this.state.dataSortedByDate).map((data) => {
+      <div className='main--contents--wrapper'>
+        {Object.keys(this.state.dataSortedByDate).map((data, key) => {
           return (
             <FormWrapperByDate
               date={data}
