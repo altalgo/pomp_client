@@ -80,7 +80,6 @@ input[type='radio']:checked {
 .radio--list > div, .check--list > div {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 0.4rem 0;
 }
 
@@ -95,4 +94,8 @@ input[type='radio']:checked {
 
 .checkgrid--table td, .objectivegrid--table td {
   padding: 0.3rem 0;
+}
+
+.emp--text {
+  font-weight: 700;
 }

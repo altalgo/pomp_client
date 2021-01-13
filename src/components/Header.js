@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Logout from './Logout';
 import '../App.css';
+import './Header.css';
 
 class Header extends Component {
   render() {

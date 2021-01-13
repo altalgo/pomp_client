@@ -10,5 +10,8 @@
   font-family: 'carmen-medium';
   src: url('./Carmen-Sans-Medium.woff') format('woff');
 }
-
+@font-face {
+  font-family: 'carmen-heavy';
+  src: url('./Carmen-Sans-Heavy.woff') format('woff');
+}
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');

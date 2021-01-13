@@ -1,3 +1,4 @@
+/*global chrome*/
 import React, { Component } from 'react';
 import '../../fonts/fonts.css';
 import './ExtLoginPage.css';
@@ -18,21 +19,25 @@ export default class ExtLoginPage extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const data = { email: this.state.email, password: this.state.password };
-    console.log(data);
+    // console.log(data);
     axios
       .post('/api/auth/extlogin', data)
       .then((response) => {
+        console.log(response)
         if (response.data.loginSuccess) {
-          // 로그인 완료 후
-           chrome.runtime.sendMessage("ipffhgmabaaegdgiahgkmlifdgnlehla",
-             { msg: "loginedLocal", uuid: response.data.userUUID },
-             function (res) {
-               console.log(res);
-           });
-          window.close();
+          // https://stackoverflow.com/questions/41353594/reactjs-chrome-extension-message-passing-not-working/41354213
+
+          const script = document.createElement("script");
+          script.innerHTML = `
+          chrome.runtime.sendMessage("olhikehcbmkheggemandfhjekkbffiki",
+          { msg: "loginedLocal", uuid: "`+ response.data.uuid + `" });
+          `;
+          document.body.appendChild(script);
+
+          // window.location.href = "/extloginsuccess";
         } else {
           alert(response.data.error);
-          window.location.reload();
+          // window.location.reload();
         }
       })
       .catch((err) => console.log(err));
@@ -44,7 +49,7 @@ export default class ExtLoginPage extends Component {
       <div className='login--container'>
         <div className='login--wrapper'>
           <div className='logo'>
-            <a href='/'>
+            <a href='/extlogin'>
               <span style={{ color: '#3E3E3E' }}>Pom</span>
               <span style={{ color: '#92A8D1' }}>p</span>
             </a>
