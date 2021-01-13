@@ -16,6 +16,12 @@
     justify-content: flex-end;
 }
 
+.form--list--item--arrow {
+    display: inline-block;
+    font-size: 28px;
+    line-height: 0.43;
+}
+
 @media(max-width:1008px) {
     .main--contents--wrapper {
         margin: 0 auto;

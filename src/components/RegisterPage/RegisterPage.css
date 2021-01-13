@@ -28,6 +28,11 @@
   border-radius: 23px;
   padding: 1.5rem 2rem 1.2rem 2rem;
   background-color: #eee;
+  font-family: 'carmen-bold';
+}
+
+.register--form--wrapper .register--form label {
+  margin-left: 0.3rem;
 }
 
 .register--form--input--wrapper {
@@ -48,7 +53,6 @@ input {
   font-size: 0.9em;
 }
 
-
 .message--area {
   width: 100%;
   height: 1rem;
@@ -58,48 +62,43 @@ input {
   font-family: 'carmen-medium';
 }
 
+.register--submit--btn {
+  font-family: 'carmen-bold';
+  background-color: #92a8d1;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  align-self: center;
+  width: 17rem;
+  height: 2.2rem;
+  margin-top: 0.5rem;
+}
+
 .caution {
-    color: red;
+  color: red;
 }
 
 .good {
-    color: green;
+  color: green;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 520px) {
   .logo {
-    font-family: 'carmen-exbold';
     font-size: 4rem;
-    margin-bottom: 1.5rem;
   }
 
   .register--form--wrapper .register--form {
-    display: flex;
-    flex-direction: column;
-    width: 16rem;
+    width: 17rem;
     height: 24.2rem;
-    margin: 0 auto;
-    border-radius: 23px;
-    padding: 1.5rem 2rem 1.2rem 2rem;
-    background-color: #eee;
-  }
-  
-  .register--form--input--wrapper {
-    display: inline-block;
-    width: 12rem;
-    text-align: left;
-    font-size: 0.8em;
+    padding: 1.6rem 1.2rem 0.8rem 1.2rem;
   }
   
   input {
-    margin-top: 0.27rem;
-    padding: 0.5rem;
-    border-radius: 15px;
-    border: none;
     width: 14.5rem;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.04) inset;
-    font-family: 'carmen-medium';
-    font-size: 0.9em;
   }
 
+  .register--submit--btn {
+    width: 14rem;
+    height: 2rem;
+  }
 }

@@ -165,7 +165,7 @@ class RegisterPage extends Component {
               onSubmit={this.handleSubmit}>
               <div className='register--form--input--wrapper'>
                 <div className='inner--input--wrapper'>
-                  <label htmlFor='email' style={{ marginLeft: '0.6rem' }}>
+                  <label htmlFor='email'>
                     Email
                   </label>
                   <input
@@ -179,7 +179,7 @@ class RegisterPage extends Component {
                   <p className='message--area email--message'></p>
                 </div>
                 <div className='inner--input--wrapper'>
-                  <label htmlFor='nick' style={{ marginLeft: '0.6rem' }}>
+                  <label htmlFor='nick'>
                     NickName
                   </label>
                   <input 
@@ -193,7 +193,7 @@ class RegisterPage extends Component {
                   <p className='message--area nick--message'></p>
                 </div>
                 <div className='inner--input--wrapper'>
-                  <label htmlFor='password' style={{ marginLeft: '0.6rem' }}>
+                  <label htmlFor='password'>
                     Password
                   </label>
                   <input
@@ -207,9 +207,7 @@ class RegisterPage extends Component {
                   <p className='message--area password--message'></p>
                 </div>
                 <div className='inner--input--wrapper'>
-                  <label
-                    htmlFor='confirmPassword'
-                    style={{ marginLeft: '0.6rem' }}>
+                  <label htmlFor='confirmPassword'>
                     Confirm Password
                   </label>
                   <input
@@ -223,7 +221,7 @@ class RegisterPage extends Component {
                   <p className='message--area confirm--password--message'></p>
                 </div>
               </div>
-              <button className='login--btn' type='submit'>
+              <button className='register--submit--btn' type='submit'>
                 Sign Up
               </button>
             </form>
