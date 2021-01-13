@@ -12,23 +12,23 @@
   padding: 2rem;
 }
 
-img {
-  width: 100%;
-}
-
 .title {
   font-size: 1.6rem;
   margin-bottom: 0.8rem;
   font-weight: 700;
+  line-height: 1.2;
+  width: 100%;
+  word-break: break-all;
 }
 
 .desc {
   margin: 0.5rem 0;
   color: #333333;
   font-size: 0.9rem;
+  line-height: 1.6;
 }
 
-.img {
+img {
   width: 100%;
 }
 
@@ -38,10 +38,6 @@ img {
   width: 100%;
 }
 
-.short--answer {
-  border-bottom: 1px black solid;
-}
-
 .linear--list {
   display: flex;
   width: 100%;
@@ -49,6 +45,7 @@ img {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  text-align: center;
 }
 
 .checked {
@@ -66,7 +63,7 @@ input[type='radio']:checked {
   width: 0.9rem;
   height: 0.9rem;
   border-radius: 100%;
-  margin-right: 0.5rem;
+  margin: 0.3rem;
 }
 
 input[type='radio'] {
@@ -77,10 +74,10 @@ input[type='radio']:checked {
   background-color: #dfe4f2;
 }
 
-.radio--list > div, .check--list > div {
+.radio--list > div, .check--list > div, .dropdown--list > div {
   display: flex;
-  justify-content: center;
   margin: 0.4rem 0;
+  align-items: center;
 }
 
 .checkgrid--list, .checkgrid--table, .objectivegrid--list, .objectivegrid--table {
@@ -98,4 +95,21 @@ input[type='radio']:checked {
 
 .emp--text {
   font-weight: 700;
+}
+
+.component--hr {
+  border: solid 1px #dddddd;
+  width: 5.5rem;
+  margin-bottom: 1.8rem;
+}
+
+@media(max-width: 918px) {
+  .container {
+    width: 85vw;
+  }
+
+  .checkgrid--list, .checkgrid--table, .objectivegrid--list, .objectivegrid--table {
+    width: 100%;
+    text-align: center;
+  }
 }

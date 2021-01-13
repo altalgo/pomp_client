@@ -8,7 +8,7 @@
 
 .header--logo {
     font-family: 'carmen-heavy';
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 .spacer {
@@ -16,7 +16,7 @@
 }
 
 .header--userinfo {
-    font-family: "carmen-exbold";
+    font-family: "carmen-medium";
     font-size: 0.9em;
 }
 

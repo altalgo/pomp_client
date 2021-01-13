@@ -7,17 +7,18 @@ export default class Check extends Component {
         <div className='title'>{this.props.title}</div>
         <div className='desc'>{this.props.desc}</div>
         <div className='img--wrapper'>
-          <img src={this.props.imgUrl} />
+          <img src={this.props.imgUrl} alt='' />
         </div>
+        <hr className="component--hr"/>
         <div className='check--list'>
-          {this.props.list.map((ele) => {
+          {this.props.list.map((ele, idx) => {
             return this.props.ans.includes(ele) ? (
-              <div className='checked'>
+              <div className='checked' key={ele + idx.toString()}>
                 <input type='radio' checked disabled />
                 {ele}
               </div>
             ) : (
-              <div>
+              <div key={ele + idx.toString()}>
                 <input type='radio' disabled />
                 {ele}
               </div>

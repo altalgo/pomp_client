@@ -4,7 +4,6 @@ import './Short.css';
 
 export default class Head extends Component {
   moreButtonHandler = () => {
-    console.log("누르지마");
     let desc = document.querySelector('.desc');
     let moreBtn = document.querySelector('.more--btn'); // ??
 
@@ -18,25 +17,9 @@ export default class Head extends Component {
   }
 
   render() {
-    const headerStyle = {
-      width: "100%",
-      backgroundColor: "white",
-      height: "auto",
-      marginBottom: "3rem",
-      display: "flex",
-      flexDirection: "column",
-      padding: "4rem 2rem 3rem"
-    }
-
-    const titleStyle = {
-      fontFamily: "carmen-exbold",
-      lineHeight: "1",
-      fontSize: "2rem"
-    }
-
     return (
-      <div style={headerStyle}>
-        <div className='title' style={titleStyle}>{this.props.title}</div>
+      <div className="form--header">
+        <div className='form--title'>{this.props.title}</div>
         <div className='desc desc--closed'> {this.props.desc}</div>
         <button className="more--btn" onClick={this.moreButtonHandler}>↓</button>
       </div>

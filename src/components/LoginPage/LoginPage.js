@@ -35,35 +35,6 @@ export default class LoginPage extends Component {
       .catch((err) => console.log(err));
   };
 
-  handleGoogleOauth = (e) => {
-    const data = axios
-      .get('/api/auth/google/login')
-      .then((response) => {
-        if (response.data.loginSuccess) {
-          window.location.href = '/forms';
-        } else {
-          alert(response.data.error);
-          window.location.reload();
-        }
-      })
-      .catch((err) => console.log(err));
-    console.log(data);
-  };
-
-  handleKakaoOauth = (e) => {
-    const data = axios
-      .get('/api/auth/kakao/login')
-      .then((response) => {
-        if (response.data.loginSuccess) {
-          window.location.href = '/forms';
-        } else {
-          alert(response.data.error);
-          window.location.reload();
-        }
-      })
-      .catch((err) => console.log(err));
-  };
-
   render() {
     const { email, password } = this.state;
     return (
@@ -78,12 +49,12 @@ export default class LoginPage extends Component {
           <div className='btn--wrapper'>
             <a href='/api/auth/google'>
               <div className='btn--google--wrapper'>
-                <img className='btn--google' src={'/img/loginGoogle.png'} />
+                <img className='btn--google' src={'/img/loginGoogle.png'} alt=''/>
               </div>
             </a>
             <a href='/api/auth/kakao'>
               <div className='btn--kakao--wrapper'>
-                <img className='btn--kakao' src={'/img/loginKakao.png'} />
+                <img className='btn--kakao' src={'/img/loginKakao.png'} alt=''/>
               </div>
             </a>
           </div>

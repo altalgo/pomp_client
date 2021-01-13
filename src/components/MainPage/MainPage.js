@@ -1,8 +1,10 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import Header from '../Header';
+import Footer from '../Footer';
 import axios from 'axios';
 import FormList from './FormList';
+
 class mainPage extends Component {
   state = {
     username: '',
@@ -24,13 +26,14 @@ class mainPage extends Component {
 
   render() {
     return (
-      <Fragment>
+      <div className="contents--wrapper">
         <Header
           username={this.state.username}
           logoutBtn={this.state.isAuth ? 'true' : 'false'}
         />
         <FormList/>
-      </Fragment>
+        <Footer/>
+      </div>
     );
   }
 }

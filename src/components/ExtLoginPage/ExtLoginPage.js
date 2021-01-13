@@ -19,7 +19,7 @@ export default class ExtLoginPage extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const data = { email: this.state.email, password: this.state.password };
-    // console.log(data);
+    console.log(data);
     axios
       .post('/api/auth/extlogin', data)
       .then((response) => {
@@ -36,10 +36,24 @@ export default class ExtLoginPage extends Component {
           document.body.appendChild(script);
 
           window.location.href = "/extloginsuccess";
-        } else {
+        } else if (response.data.error) {
+          // 가입되지 않은 회원입니다, 비밀번호가 틀렸습니다
           alert(response.data.error);
           // window.location.reload();
-        }
+        } 
+        alert(response.data.error);
+        // else {
+        //   // 이미 로그인한 상태일 때
+        //   console.log(response.data);
+        //   const script = document.createElement("script");
+        //   script.innerHTML = `
+        //   chrome.runtime.sendMessage("olhikehcbmkheggemandfhjekkbffiki",
+        //   { msg: "loginedLocal", uuid: "`+ response.data.uuid + `" });
+        //   `;
+        //   document.body.appendChild(script);
+
+        //   window.location.href = "/extloginsuccess";
+        // }
       })
       .catch((err) => console.log(err));
   };
@@ -58,12 +72,12 @@ export default class ExtLoginPage extends Component {
           <div className='btn--wrapper'>
             <a href='/api/auth/extgoogle'>
               <div className='btn--google--wrapper'>
-                <img className='btn--google' src={'/img/loginGoogle.png'} />
+                <img className='btn--google' src={'/img/loginGoogle.png'} alt='' />
               </div>
             </a>
             <a href='/api/auth/extkakao'>
               <div className='btn--kakao--wrapper'>
-                <img className='btn--kakao' src={'/img/loginKakao.png'} />
+                <img className='btn--kakao' src={'/img/loginKakao.png'} alt='' />
               </div>
             </a>
           </div>

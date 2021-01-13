@@ -49,6 +49,7 @@ class FormList extends Component {
             <FormWrapperByDate
               date={data}
               data={this.state.dataSortedByDate[data]}
+              key={key}
             />
           );
         })}
