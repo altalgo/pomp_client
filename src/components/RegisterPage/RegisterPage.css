@@ -65,3 +65,13 @@ input {
 .good {
     color: green;
 }
+
+@media (max-width: 520px) {
+  .logo {
+    font-size: 4rem;
+  }
+
+  input {
+    width: 14.5rem;
+  }
+}
