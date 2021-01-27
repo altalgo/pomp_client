@@ -19,6 +19,7 @@ export default class Head extends Component {
   render() {
     return (
       <div className="form--header">
+        <a href={this.props.formUrl}><div className="form--url">Original Form</div></a>
         <div className='form--title'>{this.props.title}</div>
         <div className='desc desc--closed'> {this.props.desc}</div>
         <button className="more--btn" onClick={this.moreButtonHandler}>↓</button>

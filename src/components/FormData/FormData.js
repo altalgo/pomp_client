@@ -16,6 +16,7 @@ import CheckGrid from '../Form/CheckGrid';
 import Image from '../Form/Image';
 import SectionTitle from '../Form/SectionTitle';
 import Youtube from '../Form/Youtube';
+import FileUpload from '../Form/FileUpload';
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -27,6 +28,7 @@ class FormData extends Component {
     isAuth: '',
   }
 
+  // 본인 폼이 맞는지 확인
   async componentDidMount() {
     const id = this.props.location.pathname.split('/')[2]
     await axios.get(`/api/forms/view/${id}`).then(res => { this.setState({ form: res.data.form.data }) }).catch(err => console.log(err));
@@ -56,6 +58,7 @@ class FormData extends Component {
                 key={data.title + idx.toString()}
                 title={data.title}
                 desc={data.desc}
+                formUrl={data.formUrl}
               />
             } else if (data.type === 0) {
               return <Short key={data.title + idx.toString()} title={data.title} desc={data.desc} imgUrl={data.imgUrl} ans={data.ans} />
@@ -125,6 +128,8 @@ class FormData extends Component {
               return <SectionTitle key={data.title + idx.toString()} title={data.title} desc={data.desc} />
             } else if (data.type === 12) {
               return <Youtube key={data.title + idx.toString()} title={data.title} desc={data.desc} link={data.ans} />
+            } else if (data.type === 13) {
+              return <FileUpload key={data.title + idx.toString()} title={data.title} desc={data.desc} imgUrl={data.imgUrl} ans={data.ans} />
             }
           })}
         </div>
