@@ -1,4 +1,4 @@
-/*global chrome*/
+// /*global chrome*/
 import React, { Component } from 'react';
 import '../../fonts/fonts.css';
 import './ExtLoginPage.css';
@@ -30,7 +30,7 @@ export default class ExtLoginPage extends Component {
           // https://stackoverflow.com/questions/34424845/adding-script-tag-to-react-jsx
           const script = document.createElement("script");
           script.innerHTML = `
-          chrome.runtime.sendMessage("olhikehcbmkheggemandfhjekkbffiki",
+          chrome.runtime.sendMessage("gmajhmdbmhadglgnommlpinilbaenalb",
           { msg: "loginedLocal", uuid: "`+ response.data.uuid + `" });
           `;
           document.body.appendChild(script);
@@ -47,7 +47,7 @@ export default class ExtLoginPage extends Component {
         //   console.log(response.data);
         //   const script = document.createElement("script");
         //   script.innerHTML = `
-        //   chrome.runtime.sendMessage("olhikehcbmkheggemandfhjekkbffiki",
+        //   chrome.runtime.sendMessage("gmajhmdbmhadglgnommlpinilbaenalb",
         //   { msg: "loginedLocal", uuid: "`+ response.data.uuid + `" });
         //   `;
         //   document.body.appendChild(script);

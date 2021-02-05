@@ -1,6 +1,4 @@
-import { format } from 'path';
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
 import './Short.css';
 
 export default class FileUpload extends Component {

@@ -26,14 +26,16 @@ class mainPage extends Component {
 
   render() {
     return (
-      <div className="contents--wrapper">
-        <Header
-          username={this.state.username}
-          logoutBtn={this.state.isAuth ? 'true' : 'false'}
-        />
-        <FormList/>
-        <Footer/>
-      </div>
+      <>
+        <div className="contents--wrapper">
+          <Header
+            username={this.state.username}
+            logoutBtn={this.state.isAuth ? 'true' : 'false'}
+          />
+          <FormList />
+        </div>
+        <Footer />
+      </>
     );
   }
 }

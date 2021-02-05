@@ -130,7 +130,7 @@ class FormData extends Component {
               return <Youtube key={data.title + idx.toString()} title={data.title} desc={data.desc} link={data.ans} />
             } else if (data.type === 13) {
               return <FileUpload key={data.title + idx.toString()} title={data.title} desc={data.desc} imgUrl={data.imgUrl} ans={data.ans} />
-            }
+            } else { return (<></>) }
           })}
         </div>
         <Footer />

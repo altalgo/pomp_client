@@ -18,6 +18,7 @@
   },
   "scripts": {
     "dev": "concurrently \"npm run start\" \"cd ../server && npm run start\"",
+    "prod" : "node server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

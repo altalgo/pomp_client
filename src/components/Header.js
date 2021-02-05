@@ -9,7 +9,8 @@ class Header extends Component {
   logoutHandler = (e) => {
     const script = document.createElement("script");
     script.innerHTML = `
-    chrome.runtime.sendMessage("olhikehcbmkheggemandfhjekkbffiki",
+    alert('Extension will also be logged out.');
+    chrome.runtime.sendMessage("gmajhmdbmhadglgnommlpinilbaenalb",
     { msg: "logoutBrowser"});
     `;
     document.body.appendChild(script);
