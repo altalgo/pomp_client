@@ -19,11 +19,11 @@ export default class ExtLoginPage extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const data = { email: this.state.email, password: this.state.password };
-    console.log(data);
+    // console.log(data);
     axios
       .post('/api/auth/extlogin', data)
       .then((response) => {
-        console.log(response)
+        // console.log(response)
         if (response.data.loginSuccess) {
           // https://stackoverflow.com/questions/41353594/reactjs-chrome-extension-message-passing-not-working/41354213
 

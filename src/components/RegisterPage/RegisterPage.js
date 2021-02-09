@@ -51,7 +51,7 @@ class RegisterPage extends Component {
       } else {
         p.setAttribute("class", "message--area email--message caution");
         p.innerText = res.message;
-        console.log(p.innerText);
+        // console.log(p.innerText);
         this.validation['email'].status = false;
       }
 
@@ -101,7 +101,7 @@ class RegisterPage extends Component {
         p.setAttribute("class", "message--area confirm--password--message caution");
         p.innerText = "비밀번호가 일치하지 않습니다.";
         this.validation['confirmPassword'].status = false;
-        console.log(p, p.innnerText);
+        // console.log(p, p.innnerText);
     } else {
         p.setAttribute("class", "message--area confirm--password--message good");
         p.innerText = "비밀번호가 일치합니다.";
@@ -130,7 +130,7 @@ class RegisterPage extends Component {
     e.preventDefault();
     if (Object.values(this.validation).every((v) => v.status === true)) {
       const data = { nick:this.state.nick, email: this.state.email, password: this.state.password };
-      console.log(data);
+      // console.log(data);
       axios
         .post('/api/auth/join', data)
         .then((response) => {

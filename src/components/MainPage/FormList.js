@@ -15,7 +15,7 @@ class FormList extends Component {
         this.setState({
           forms: res.data.headers,
         });
-        console.log(this.state.forms);
+        // console.log(this.state.forms);
       })
       .catch((err) => console.log(err));
 

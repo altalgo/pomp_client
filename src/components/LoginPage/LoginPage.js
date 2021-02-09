@@ -18,7 +18,7 @@ export default class LoginPage extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const data = { email: this.state.email, password: this.state.password };
-    console.log(data);
+    // console.log(data);
     axios
       .post('/api/auth/login', data)
       .then((response) => {
@@ -49,12 +49,12 @@ export default class LoginPage extends Component {
           <div className='btn--wrapper'>
             <a href='/api/auth/google'>
               <div className='btn--google--wrapper'>
-                <img className='btn--google' src={'/img/loginGoogle.png'} alt=''/>
+                <img className='btn--google' src={'/img/loginGoogle.png'} alt='' />
               </div>
             </a>
             <a href='/api/auth/kakao'>
               <div className='btn--kakao--wrapper'>
-                <img className='btn--kakao' src={'/img/loginKakao.png'} alt=''/>
+                <img className='btn--kakao' src={'/img/loginKakao.png'} alt='' />
               </div>
             </a>
           </div>
