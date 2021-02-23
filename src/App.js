@@ -21,7 +21,7 @@ function App() {
           exact
           path='/register'
           component={Auth(RegisterPage, false)}></Route>
-        <Route path='/' component={ErrorPage}></Route>
+        <Route path='/:error' component={ErrorPage}></Route>
       </Switch>
     </Router>
   );
