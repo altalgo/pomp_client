@@ -22,6 +22,7 @@
 }
 
 .desc {
+  max-width: 100%;
   margin: 0.5rem 0;
   color: #333333;
   font-size: 0.9rem;
@@ -80,11 +81,19 @@ input[type='radio']:checked {
   align-items: center;
 }
 
-.checkgrid--list, .checkgrid--table, .objectivegrid--list, .objectivegrid--table {
-  width: 30rem;
+.checkgrid--list, .checkgrid--table, .objectivegrid--list {
+  width: 90%;
   text-align: center;
+  margin: 0 auto;
 }
-
+.objectivegrid--table{
+  width:100%;
+  text-align: center;
+  margin: 0 auto;
+}
+td:first-child{
+  width:34rem;
+}
 .checkgrid--list, .objectivegrid--list {
   margin: 0 auto;
 }

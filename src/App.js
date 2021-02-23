@@ -6,8 +6,8 @@ import ExtLoginSuccessPage from './components/ExtLoginPage/ExtLoginSuccessPage';
 import LoginPage from './components/LoginPage/LoginPage';
 import RegisterPage from './components/RegisterPage/RegisterPage';
 import Forms from './components/FormData/FormData';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 import Auth from './hoc/auth';
-
 function App() {
   return (
     <Router>
@@ -21,6 +21,7 @@ function App() {
           exact
           path='/register'
           component={Auth(RegisterPage, false)}></Route>
+        <Route path='/' component={ErrorPage}></Route>
       </Switch>
     </Router>
   );
